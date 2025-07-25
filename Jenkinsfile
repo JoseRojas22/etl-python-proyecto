@@ -13,5 +13,11 @@ pipeline {
                 sh 'python transform.py'
             }
         }
+
+        stage('Ejecutar Lectura') {
+            steps {
+                sh 'python lectura.py'
+            }
+        }
     }
 }

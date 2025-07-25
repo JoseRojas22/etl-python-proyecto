@@ -1,8 +1,14 @@
 from extract import df
 import pandas as pd
 
+# Expandir el diccionario 'rating' en dos columnas: 'rating_rate' y 'rating_count'
+rating_df = df['rating'].apply(pd.Series)
+df['rating_rate'] = rating_df['rate']
+df['rating_count'] = rating_df['count']
+
+
 #eliminamos las columnas irrelevantes
-df.drop(['image', 'description'], axis=1, inplace=True)
+df.drop(['image', 'description', 'rating'], axis=1, inplace=True)
 
 #renombramos las columnas
 df.columns = ['id', 'product_title', 'price', 'category', 'rating_rate', 'rating_count']

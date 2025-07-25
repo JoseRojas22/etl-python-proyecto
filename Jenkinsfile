@@ -10,7 +10,7 @@ pipeline {
 
         stage('Ejecutar ETL') {
             steps {
-                sh 'python lectura.py'
+                sh 'python transform.py'
             }
         }
     }

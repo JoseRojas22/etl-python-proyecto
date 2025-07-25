@@ -31,4 +31,4 @@ df_clean = df.dropna()
 print(df_clean.head())
 
 # Save the transformed DataFrame for the load.py script
-df_clean.to_csv("data_output/transformed_data.csv", index=False)
+df_clean.to_csv("data_output/transformed_data_products.csv", index=False)
